@@ -1,4 +1,3 @@
-```markdown
 #  ModernShop Ecommerce App & Automation Suite
 
 This is a full-featured ecommerce web application built with Flask and tested using both unit tests (pytest) and end-to-end browser automation (Playwright).
