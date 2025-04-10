@@ -1,0 +1,43 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg
+*.egg-info/
+dist/
+build/
+*.log
+
+# Virtual environments
+venv/
+ENV/
+env/
+.venv/
+
+# Jupyter and IPython
+.ipynb_checkpoints
+*.ipynb
+
+# Pytest reports and caches
+.cache/
+report.html
+*.pytest_cache/
+
+# Playwright
+playwright-report/
+test-results/
+*.zip
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# VSCode & IDEs
+.vscode/
+.idea/
+*.code-workspace
+*.swp
+
+# Misc
+*.bak
+*.tmp
+*.log
