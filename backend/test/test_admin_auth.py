@@ -10,8 +10,7 @@ def create_auth_header(username, password):
 def test_admin_access_with_valid_credentials(client):
     headers = create_auth_header("admin", "secret123")
     res = client.get("/admin", headers=headers)
-    # We expect this to try serving admin.html. If the file doesn’t exist, 404 is fine, but not 401.
-    assert res.status_code in [200, 404]  # Acceptable: file served or not found
+    assert res.status_code in [200, 404]  
 
 def test_admin_access_with_invalid_credentials(client):
     headers = create_auth_header("admin", "wrongpass")
