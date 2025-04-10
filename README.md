@@ -155,7 +155,7 @@ pytest automation/ --html=report.html --self-contained-html
 
 ```txt
 Username: admin
-Password: secret123
+Password: admin#123
 ```
 
 ---
