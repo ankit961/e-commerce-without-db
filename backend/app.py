@@ -12,10 +12,9 @@ CORS(app)
 # Configuration
 NTH_ORDER = 3
 DISCOUNT_PERCENTAGE = 10
-#Admin
-# 🔐 Admin credentials
+#Admin credentials
 ADMIN_USERNAME = "admin"
-ADMIN_PASSWORD = "secret123"  # You can change this
+ADMIN_PASSWORD = "admin#123"  
 
 
 # In-memory store
@@ -101,7 +100,7 @@ def checkout():
                     "item_id": backend_id,
                     "quantity": item["quantity"]
                 })
-        users_cart[user_id] = cart  # cache it for user
+        users_cart[user_id] = cart 
 
     if not cart:
         return jsonify({"error": "Cart is empty"}), 400
@@ -155,7 +154,7 @@ def admin_page():
     auth = request.authorization
     if not auth or not check_auth(auth.username, auth.password):
         return authenticate()
-    return send_from_directory(FRONTEND_FOLDER, 'admin.html')  # Adjust path if needed
+    return send_from_directory(FRONTEND_FOLDER, 'admin.html')  
 
 @app.route('/admin/generate-discount', methods=['POST'])
 def generate_discount():
@@ -168,7 +167,7 @@ def generate_discount():
 @app.route('/admin/stats', methods=['GET'])
 def get_stats():
     return jsonify({
-        "items_purchased": dict(item_stats),  # renamed from items_sold
+        "items_purchased": dict(item_stats),  
         "total_sales": total_sales,
         "discount_codes": list(discount_codes.keys()),
         "total_discount_amount": total_discount_amount
