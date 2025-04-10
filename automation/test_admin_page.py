@@ -19,7 +19,7 @@ def test_admin_access_and_generate_discount():
         browser = p.chromium.launch(headless=True)
         context = browser.new_context(http_credentials={
             "username": "admin",
-            "password": "secret123"
+            "password": "admin#123"
         })
         page = context.new_page()
 
